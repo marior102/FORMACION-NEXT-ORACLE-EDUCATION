@@ -109,6 +109,117 @@ A partir de aca veremos el lenguaje de programacion de JavaScript, con pequeños
 	
 
 	var promedio= (edadJimena+edadPaola+edadLaura)/3
+<meta charset="utf-8">
+<h1> CURSO FORMACION ONE ORACLE NEXT EDUCATION-LOGICA DE PROGRAMACION</h1>
+<br>
+<br>
+<br>
+<h2> HTML</h2>
+<br>
+<br>
+<br>
+Estoy definiendo la edad de Cristhian, un ejemplo para mostrar que el codigo html es estatico
+<br>
+<br>
+<h2> JS</h2>
+<br>
+<br>
+A partir de aca veremos el lenguaje de programacion de JavaScript, con pequeños ejemplos.
+<br>
+<h3>ACT 4 CONCATENACION DE CARACTERES</h3>
+<br>
+<script>
+	
+	document.write("La edad de Cristian...")
+	document.write("<br>")
+	document.write(25+8) //suma, ya que los dos caracteres son numericos, sin la comilla el compilador entiende que son asi. 
+	document.write("<br>")
+	document.write("25"+"8") //Cuando hay 2 variables de tipo string separados por un signo +, concatena y lo vuelve uno solo.
+	document.write("<br>")
+	document.write("25"+8) //Concatena un numero como variable String y otro como numerico
+	document.write("<br>")
+</script>
+<br>
+<h3>ACT 6- OPERACIONES CON TEXTOS Y NUMERICOS</h3>
+<br>
+<script>
+	
+	document.write("El promedio de edad de Juan, Pedro y Carlos es...")
+	document.write("<br>")
+	document.write((25+8+15)/3) //operaciones numericas
+	document.write("<br>")
+	document.write("La suma de las edades de  Juan, Pedro y Carlos es..."+(25+25+15))//se concatena los y hace la operacion de suma, llevar en cuenta en colocar adecuadamente los parentesis para las operaciones matematicas. 
+	document.write("<br>")
+	document.write("Juan nacio en el año...")
+	document.write("<br>")
+	document.write(2022-25)
+	document.write("<br>")
+	document.write("Pedro nacio en el año...")
+	document.write("<br>")
+	document.write(2022-25)
+	document.write("<br>")
+	document.write("Carlos nacio en el año...")
+	document.write("<br>")
+	document.write(2022-15)
+
+</script>
+<h3>ACT 7- REDUCIENDO ALTERACIONES</h3>
+<script>
+	var anho = 2022; //utilizando variables 
+	document.write("Juan tiene: " + (anho-2000) + " años")//Al utilizar variables se reduce el tiempo en vez de colocar el año en cada linea
+	document.write("<br>")
+	document.write("<br>")
+	document.write("Pedro tiene: " + (anho-1995) + " años")//Llevar en cuenta que minuscula y mayuscula son diferenciadas en Js, utilizar siempre minuscula para un mejor manejo
+	anho= 2030 //El codigo se compila linea por linea, llevar en cuenta que se declara solo una vez y al cambiar el valor de la variable de 2022 a 2030, en la proxima linea se ejecutara el ultimo valor colocado en la variable
+	document.write("<br>")
+	document.write("<br>")
+	document.write("Carlos tiene: " + (anho-2005) + " años")
+
+
+</script>
+<h3>ACT 8- VARIABLES</h3>
+<script>
+	anho = 2025; 
+
+	document.write("Juan tiene: " + (anho-2000) + " años")
+	document.write("<br>")
+	document.write("<br>")
+	document.write("Pedro tiene: " + (anho-1995) + " años")
+
+	anho= 2030 
+
+	document.write("<br>")
+	document.write("<br>")
+	document.write("Carlos tiene: " + (anho-2005) + " años")
+
+	document.write("<br>")
+	document.write("<br>")
+	document.write("<br>")
+	document.write("<br>")
+
+	anho= 2020
+	document.write("Jimena tiene: " + (anho-2005) + " años")
+	document.write("<br>")
+	document.write("<br>")
+
+	document.write("Paola tiene: " + (anho-1995) + " años")
+	document.write("<br>")
+	document.write("<br>")
+
+	document.write("Laura tiene: " + (anho-2005) + " años")
+	document.write("<br>")
+	document.write("<br>")
+
+	var edadPaola = 25
+	var edadJimena= 15
+	var edadLaura= 15
+
+	var nombre1 = "Jimena"
+	var nombre2 = "Paola"
+	var nombre3 = "Laura"
+	
+
+	var promedio= (edadJimena+edadPaola+edadLaura)/3
 
 	document.write("El promedio de las edades de " + nombre1 + ", "+ nombre2 + " y " + nombre3 + " es: " + Math.round(promedio) )
 	document.write("<br>")
@@ -130,4 +241,112 @@ A partir de aca veremos el lenguaje de programacion de JavaScript, con pequeños
 	document.write(multiplicador + " por 1 es: " + multiplicador * 9 + "<br>");
 	document.write(multiplicador + " por 1 es: " + multiplicador * 10 + "<br>");
 </script>
+<h3>ACT 9- MANTENIMIENTO DE CODIGO</h3>
+<script>
+	anho = 2025; 
+	var saltoLinea= "<br><br>"
+
+	document.write("Juan tiene: " + (anho-2000) + " años")
+	document.write(saltoLinea)
+	document.write("Pedro tiene: " + (anho-1995) + " años")
+
+	anho= 2030 
+
+	document.write(saltoLinea)
+	document.write("Carlos tiene: " + (anho-2005) + " años")
+
+	document.write(saltoLinea)
+
+	anho= 2020
+	document.write("Jimena tiene: " + (anho-2005) + " años")
+	document.write(saltoLinea)
+	
+	document.write("Paola tiene: " + (anho-1995) + " años")
+	document.write(saltoLinea)
+	document.write("Laura tiene: " + (anho-2005) + " años")
+	document.write(saltoLinea)
+
+	var edadPaola = 25
+	var edadJimena= 15
+	var edadLaura= 15
+
+	var nombre1 = "Jimena"
+	var nombre2 = "Paola"
+	var nombre3 = "Laura"
+	
+
+	var promedio= (edadJimena+edadPaola+edadLaura)/3
+
+	document.write("El promedio de las edades de " + nombre1 + ", "+ nombre2 + " y " + nombre3 + " es: " + Math.round(promedio) )
+	document.write(saltoLinea)
+</script>
+
+<h3>ACT 10- USO DE FUNCIONES</h3>
+<script>
+	function saltarLinea(){
+		document.write("<br><br>");
+		}
+
+	anho = 2025; 
+	var saltoLinea= "<br><br>"
+
+	document.write("Juan tiene: " + (anho-2000) + " años")// LAS FUNCIONES TIENE UNA CARACTERISTICA DE EMPEZAR CON UN PARENTESIS
+
+	saltarLinea();
+
+	document.write("Pedro tiene: " + (anho-1995) + " años") 
+
+	anho= 2030 
+
+	saltarLinea();
+
+	document.write("Carlos tiene: " + (anho-2005) + " años")
+
+	saltarLinea();
+
+
+</script>
+<h3>ACT 11- USO DE FUNCIONES CON PARAMENTROS</h3>
+<script>
+	function saltarLinea(){
+		document.write("<br><br>");
+		}
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	anho = 2025; 
+
+	imprimir("Juan tiene: " + (anho-2000) + " años")// LAS FUNCIONES TIENE UNA CARACTERISTICA DE EMPEZAR CON UN PARENTESIS
+
+	saltarLinea();
+
+	imprimir("Pedro tiene: " + (anho-1995) + " años") 
+
+	anho= 2030 
+
+	saltarLinea();
+
+	imprimir("Carlos tiene: " + (anho-2005) + " años")
+
+	saltarLinea();
+
+
+</script>
+
+<h3>ACT 12- EJERCICIOS </h3>
+<script>
+	function saltarLinea(){
+		document.write("<br><br>");
+		}
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var miEdad = 33; 
+	var edadHna= 32
+	imprimir("Nuestrs diferencia de edad es: " + (miEdad-edadHna));
+
 </script>
