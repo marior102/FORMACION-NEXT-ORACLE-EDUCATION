@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<h1> CURSO FORMACION ONE ORACLE NEXT EDUCATION-LOGICA DE PROGRAMACION</h1>
+<br>
+<br>
+<br>
+<h3>¿Alcohol o Gasolina?</h3>
+<br>
+<br>
+<br>
+<script>
+
+	var gasolina= "Gasolina"
+	var alcohol= "Alcohol"
+	var kmRecorGas = 480 
+	var kmRecorAlc= 300
+	var litrosTanque= 40
+	var efiGas= kmRecorGas/litrosTanque
+	var efiAlc= kmRecorAlc/litrosTanque
+	document.write("La eficiencia del carro usando " + gasolina+ " es de: " + efiGas + " kilometro recorrido por cada litro" + "<br>"+ "<br>")
+	document.write("La eficiencia del carro usando " + alcohol+ " es de: " + efiAlc + " kilometro recorrido por cada litro" + "<br>"+ "<br>" )
+		if (efiGas > efiAlc) {
+			document.write("Conviene mas utilizar " + gasolina + " porque el consumo de " + efiGas + " por km recorrido es superior y mas eficiente" + "<br>"+ "<br>"  );
+		}
+		if (efiGas < efiAlc) {
+			document.write("Conviene mas utilizar " + alcohol + " porque el consumo de " + efiAlc + " por km recorrido es superior y mas eficiente" + "<br>"+ "<br>"  );
+		}
+</script>
