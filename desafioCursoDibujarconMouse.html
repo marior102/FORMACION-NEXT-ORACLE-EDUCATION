@@ -1,0 +1,91 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+    var colorPincel= "blue";
+    var posicionXrojo = 0
+    var posicionXazul = 50
+    var posicionXverde =100
+    var posicionY = 0
+
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = colorPincel;
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+    }
+    
+    function capturarColorPincel(evento){
+
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+
+            if ((x < posicionXrojo + 50)&&
+                (x > posicionXrojo - 50)&&
+                (y < posicionY + 50))
+             {
+                alert("Seleccionaste pincel color ROJO");
+                return colorPincel = "red";
+
+             }
+             if ((x < posicionXazul + 50)&&
+                (x > posicionXazul - 50)&&
+                (y < posicionY + 50))
+             {
+                alert("Seleccionaste pincel color AZUL");
+                return colorPincel = "blue";
+
+             }
+             if ((x < posicionXverde + 50)&&
+                (x > posicionXverde - 50)&&
+                (y < posicionY + 50))
+             {
+                alert("Seleccionaste pincel color VERDE");
+                return colorPincel = "green";
+
+             }
+
+
+    }
+    
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+    function dibujarPaletas(x,y,color){
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+    }
+    dibujarPaletas(0, 0 , "red");
+    dibujarPaletas(50, 0 , "blue");
+    dibujarPaletas(100, 0 , "green");
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+    pantalla.onclick = capturarColorPincel;
+
+</script>
